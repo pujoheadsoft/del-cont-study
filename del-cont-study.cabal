@@ -1,0 +1,135 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           del-cont-study
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/del-cont-study#readme>
+homepage:       https://github.com/githubuser/del-cont-study#readme
+bug-reports:    https://github.com/githubuser/del-cont-study/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2025 Author name here
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/del-cont-study
+
+library
+  exposed-modules:
+      Control.Monad.CC
+      Control.Monad.CC.Cursor
+      Control.Monad.CC.Dynvar
+      Control.Monad.CC.Prompt
+      Control.Monad.CC.Seq
+      DelimitedContinuation.BuiltinCC
+      DelimitedContinuation.CCDelcont.BreadthFirstTraversal
+      DelimitedContinuation.CCDelcont.Example
+      DelimitedContinuation.CCDelcont.ResumableParsing
+      DelimitedContinuation.CCDelcont.TreeIterator
+      DelimitedContinuation.Example
+  other-modules:
+      Paths_del_cont_study
+  autogen-modules:
+      Paths_del_cont_study
+  hs-source-dirs:
+      src
+  default-extensions:
+      LambdaCase
+      DerivingStrategies
+      DataKinds
+      TypeFamilies
+      BlockArguments
+      FunctionalDependencies
+      RecordWildCards
+      DefaultSignatures
+      PatternSynonyms
+      TemplateHaskell
+      PartialTypeSignatures
+      AllowAmbiguousTypes
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , extra
+    , mtl
+    , random
+    , text
+    , time
+  default-language: GHC2021
+
+executable del-cont-study-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_del_cont_study
+  autogen-modules:
+      Paths_del_cont_study
+  hs-source-dirs:
+      app
+  default-extensions:
+      LambdaCase
+      DerivingStrategies
+      DataKinds
+      TypeFamilies
+      BlockArguments
+      FunctionalDependencies
+      RecordWildCards
+      DefaultSignatures
+      PatternSynonyms
+      TemplateHaskell
+      PartialTypeSignatures
+      AllowAmbiguousTypes
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , del-cont-study
+    , extra
+    , mtl
+    , random
+    , text
+    , time
+  default-language: Haskell2010
+
+test-suite del-cont-study-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Control.Monad.CCSpec
+      DelimitedContinuation.BuiltinCCSpec
+      Paths_del_cont_study
+  autogen-modules:
+      Paths_del_cont_study
+  hs-source-dirs:
+      test
+  default-extensions:
+      LambdaCase
+      DerivingStrategies
+      DataKinds
+      TypeFamilies
+      BlockArguments
+      FunctionalDependencies
+      RecordWildCards
+      DefaultSignatures
+      PatternSynonyms
+      TemplateHaskell
+      PartialTypeSignatures
+      AllowAmbiguousTypes
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , del-cont-study
+    , extra
+    , hspec
+    , mockcat
+    , mtl
+    , random
+    , text
+    , time
+  default-language: Haskell2010
